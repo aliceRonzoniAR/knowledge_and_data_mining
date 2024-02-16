@@ -2,17 +2,16 @@
 Knowledge and Data Mining Project: Weighted Model Counting via Knowledge Compilation
 
 ## Problem presentation
-Write a method that transforms a formula in sd-DNNF form,and use this method for computing the weighted model countof the formula.
-Evaluate your approach by comparing the results of yourmethod with the explicit computation of weighted modelcounting via truth table.
+Write a method that transforms a formula in sd-DNNF form and use this method for computing the weighted model count of the formula.
+Evaluate your approach by comparing the results of your method with the explicit computation of weighted model counting via truth table.
 
-To do resolve this problem I proced in the following way:
+To resolve this problem I proceded in the following way:
 
 1. Transform the formula in CNF using SymPy library
 2. Transform the formula in d-DNNF:
   - Substitute the negation of the propositional variable with its lower value
   - Separate the input into smaller subformulas
-  - Create a dictionary where 'key' is the propositional variable common in the subformulas (or one of the subformula) and 'value' is a tuple made of subformulas
-    that share the propositional varibale (or just the subformula)
+  - Create a dictionary where 'key' is the propositional variable common in the subformulas (or one of the subformula) and 'value' is a tuple made of subformulas that share the propositional varibale (or just the subformula)
   - Shannon's Expantion
 3. Transform the formula is sd-DNNF:
   - Find the main connective and divide the formula into two subformulas
